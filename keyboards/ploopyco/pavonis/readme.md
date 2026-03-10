@@ -11,6 +11,11 @@ Make example for this keyboard (after setting up your build environment):
     make ploopyco/pavonis:default
     qmk compile -kb ploopyco/pavonis -km default
 
+To build with VIA support (remappable keymap over USB):
+
+    make ploopyco/pavonis:via
+    qmk compile -kb ploopyco/pavonis -km via
+
 Flashing example for this keyboard:
 
     Put the board into bootloader mode by holding the boot button while connecting the USB cable, bolding boot and shorting the reset jumper or holding SW1 and plugging in the USB cable, then drag and drop the uf2 file onto the drive that mounts.
