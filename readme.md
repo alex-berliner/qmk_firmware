@@ -1,40 +1,27 @@
-# THIS IS THE DEVELOP BRANCH
+# Custom ploopy build
+This is a custom firmware build for the Ploopy touchpad that provides a "reboot to bootloader" feature along with an extended mouse sensitivity option. It currently uses VIA to control the settings.
 
-Warning- This is the `develop` branch of QMK Firmware. You may encounter broken code here. Please see [Breaking Changes](https://docs.qmk.fm/#/breaking_changes) for more information.
+## Setup
+Install the via desktop app. When you open it you should see this screen.
+![](assets/1%20-%20starts%20out%20like%20this.png)
 
-# Quantum Mechanical Keyboard Firmware
+Click the cog icon on the top right to go to the settings menu. Enable the toggle for "Show Design Tab".
+![](assets/2%20-%20go%20to%20settings%20and%20click%20show%20design%20tab.png)
 
-[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+Go to the Design tab and click Load.
+![](assets/3%20-%20go%20to%20design%20tab%20and%20click%20load.png)
 
-This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
+Provide the included via_layout.json file. Current bug: You must load the json twice in a row or it will not work!
+![](assets/4%20-%20load%20the%20included%20json%20twice.png)
 
-## Documentation
+Click on the Configure tab on the top, then click on the Display tab on the bottom left.
 
-* [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
+Here you you may change the sensitivity and reboot the device into bootloader.
+![](assets/5%20-%20go%20back%20to%20configure%20and%20click%20display%20on%20the%20left.png)
 
-The docs are powered by [VitePress](https://vitepress.dev/). They are also viewable offline; see [Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation) for more details.
+When you reboot the device into bootloader, it will reboot and present itself as a mass storage device called RPI-RP2. To update the device, copy the included .uf2 firmware file to RPI-RP2. The device will reboot automatically with the new firmware installed.
+![](assets/6%20-%20to%20reflash%2C%20copy%20uf2%20to%20the%20drive%20that%20appears.png)
 
-You can request changes by making a fork and opening a [pull request](https://github.com/qmk/qmk_firmware/pulls).
 
-## Supported Keyboards
+## Compilation
 
-* [Planck](/keyboards/planck/)
-* [Preonic](/keyboards/preonic/)
-* [ErgoDox EZ](/keyboards/ergodox_ez/)
-* [Clueboard](/keyboards/clueboard/)
-* [Cluepad](/keyboards/clueboard/17/)
-* [Atreus](/keyboards/atreus/)
-
-The project also includes community support for [lots of other keyboards](/keyboards/).
-
-## Maintainers
-
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by [Zach White](https://github.com/skullydazed), and the Atreus by [Phil Hagelberg](https://github.com/technomancy).
-
-## Official Website
-
-[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
