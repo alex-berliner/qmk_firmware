@@ -22,6 +22,10 @@ Here you you may change the sensitivity and reboot the device into bootloader.
 When you reboot the device into bootloader, it will reboot and present itself as a mass storage device called RPI-RP2. To update the device, copy the included .uf2 firmware file to RPI-RP2. The device will reboot automatically with the new firmware installed.
 ![](assets/6%20-%20to%20reflash%2C%20copy%20uf2%20to%20the%20drive%20that%20appears.png)
 
+## Warning About Reboot To Bootloader
+Allowing the device to be persistently able to reboot into bootloader is technically an attack vector for a usage logger because one could send the command to reboot into bootloader and upload a new, malicious firmware. However the sake of accessibility, it has been activated.
 
-## Compilation
+That being said, I do not think it is a big deal for individual use for the following reason:
+
+An attacker would need to reverse the specific protocol used for this firmware image to perform the attack. This is more of a big deal for firmwares that are in widespread use. One using this image would have to be the target of the size of a hostile government to be attacked this way. But be aware!
 
