@@ -11,7 +11,7 @@ Click the cog icon on the top right to go to the settings menu. Enable the toggl
 Go to the Design tab and click Load.
 ![](assets/3%20-%20go%20to%20design%20tab%20and%20click%20load.png)
 
-Provide the included via_layout.json file. Current bug: You must load the json twice in a row or it will not work!
+Provide the included via_layout.json file. **Current bug: You must load the json twice in a row or it will not work!**
 ![](assets/4%20-%20load%20the%20included%20json%20twice.png)
 
 Click on the Configure tab on the top, then click on the Display tab on the bottom left.
